@@ -1,0 +1,25 @@
+{
+  "theme-data": {
+    "name": "DevTheme",
+    "description": "A simple, clean, minimalist theme, featuring content-focused design and single-column layout."
+  },
+  "menu": "Menu",
+  "blog": "Blog",
+  "continue-reading": "Continue reading",
+  "type-to-start-searching": "Type to start searching",
+  "search": "Search",
+  "latest-posts": "Latest posts",
+  "related-posts": "Related posts",
+  "you-haven't-yet-saved-any-bookmarks-to-bookmark-a-post-just-click": "You haven't yet saved any bookmarks. To bookmark a post, just click",
+  "latest-tweets": "Latest Tweets",
+  "newsletter": "Newsletter",
+  "subscribe-to-receive-our-latest-news": "Subscribe to receive our latest news.",
+  "find-us-on": "Find us on",
+  "pages": "Pages",
+  "powered-by": "Powered by",
+  "search-page": "Search page",
+  "newer": "Newer",
+  "older": "Older",
+  "search-results-for": "Search results for",
+  "load-more-posts": "Load more posts"
+}
