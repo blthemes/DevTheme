@@ -63,7 +63,7 @@
 						<div class="intro-meta">
 							<?php if($page->user(profilePicture)): ?>
 							<figure class="intro-image">
-								<img src="<?php echo $helper->cdn_that_image($page->user(profilePicture),100)?>?v1" alt="<?php echo $fullName?>" />
+								<img src="<?php echo $helper->cdn_that_image($page->user(profilePicture),100)?>" alt="<?php echo $fullName?>" />
 							</figure>
 							<?php endif;?>
 							<div class="inner">
