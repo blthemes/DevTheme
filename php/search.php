@@ -1,7 +1,9 @@
 <?php
 require_once 'lib/filecache.php';
 $searchTerm = urldecode($url->parameter('search'));
+$searchTerm = Text::removeHTMLTags($searchTerm);
 $searchTerm = trim(preg_replace('/\s+/', ' ',$searchTerm)); //remove repeated spaces and trim
+$searchTerm = htmlspecialchars ($searchTerm);
 
 /**caching pages for performance */
 $fCache = new fileCache();
