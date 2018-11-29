@@ -6,11 +6,7 @@
 				<div class="intro-meta">
 					<div class="inner">
 						<?php if ($site->slogan()): ?>
-						<h1>
-							<strong>
-								<?php echo $helper->slogan(); ?>
-							</strong>
-						</h1>
+						<h1><?php echo $helper->slogan(); ?></h1>
 						<?php endif ?>
 						<?php if ($site->description()): ?>
 						<p>

@@ -5,15 +5,11 @@
 	</span>
 	<span class="facebook" data-url="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode ($page->permalink()) ?>" data-toggle="tooltip" data-placement="top" rel="nofollow noreferrer" data-original-title="Share on Facebook">
 		<i class="icon-facebook"></i>
-	</span>
-
-	<span data-url="https://plus.google.com/share?url=<?php echo urlencode ($page->permalink()) ?>" class="google-plus" data-toggle="tooltip" data-placement="top" rel="nofollow noreferrer" data-original-title="Share on Google+">
-		<i class="icon-googlePlus"></i>
-	</span>
+	</span>	
 	<span data-url="https://www.reddit.com/submit?url=<?php echo urlencode ($page->permalink()) ?>&amp;title=<?php echo urlencode($page->title()) ?>" data-toggle="tooltip" data-placement="top" class="reddit" rel="nofollow noreferrer" data-original-title="Share on Reddit">
 		<i class="icon-reddit"></i>
 	</span>
-	<a href="mailto:?subject=<?php echo urlencode($page->title()) ?>&amp;body=<?php echo urlencode ($page->permalink()) ?>" data-toggle="tooltip" data-placement="top" class="email" rel="nofollow noreferrer" data-original-title="Share by Email">
+	<a href="mailto:?subject=<?php echo rawurlencode($page->title()) ?>&amp;body=<?php echo urlencode ($page->permalink()) ?>" data-toggle="tooltip" data-placement="top" class="email" rel="nofollow noreferrer" data-original-title="Share by Email">
 		<i class="icon-envelope"></i>
 	</a>
 </div>

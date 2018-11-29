@@ -4,7 +4,6 @@ $searchTerm = urldecode($url->parameter('search'));
 $searchTerm = Text::removeHTMLTags($searchTerm);
 $searchTerm = trim(preg_replace('/\s+/', ' ',$searchTerm)); //remove repeated spaces and trim
 $searchTerm = htmlspecialchars ($searchTerm);
-
 /**caching pages for performance */
 $fCache = new fileCache();
 $fCache->changeConfig([
@@ -48,6 +47,8 @@ $json = json_encode($cache, JSON_UNESCAPED_UNICODE);
 //$err = json_last_error();
 
 echo '<script>var searchArr=JSON.parse(\''. $json.'\'), searchTerm="'. $searchTerm .'", domainBase="'.DOMAIN_BASE.'" ;</script>'.PHP_EOL;
+//echo Theme::javascript('js/search/elasticlunr.js');
+//echo Theme::javascript('js/search/search.js');	
 echo Theme::javascript('js/search/searchbundle.min.js');
 ?>
 

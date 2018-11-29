@@ -3,6 +3,11 @@
 <head>
 	<?php include(THEME_DIR_PHP.'head.php'); ?>
 	<?php
+	/*
+	echo Theme::css('css/vendor.css');
+	echo Theme::css('css/main.css');
+	echo Theme::css('css/dticons.css');
+	*/ 
 	echo Theme::css('css/bundle.min.css');
     ?>
 
@@ -32,7 +37,13 @@
 		<!-- Footer -->
 		<?php include(THEME_DIR_PHP.'footer.php'); ?>
 
-		<?php	
+		<?php
+		/*
+		echo Theme::javascript('js/jquery-3.3.1.min.js');
+		echo Theme::javascript('js/vendor.js');	
+		echo Theme::javascript('js/main.js');
+		echo Theme::javascript('js/highlight.js');
+		*/
 		echo Theme::javascript('js/bundle.min.js');			
         ?>		
 	</div>

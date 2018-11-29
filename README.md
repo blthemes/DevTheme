@@ -1,4 +1,2 @@
-# DevTheme
-A simple, clean, minimalist theme, featuring content-focused design and single-column layout.
-
-Translators version.
+# DevTheme-Beta
+This is a beta version. Do not use it in production.

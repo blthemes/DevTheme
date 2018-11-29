@@ -38,8 +38,7 @@
 
 		<div class="footer-content">
 			<div class="row">
-				<div class="col-md-4">
-						
+				<div class="col-md-4">					
 					<h3 class="title"><?php echo $L->get('Find us on') ?></h3>
 					<ul class="social">
 						<?php foreach (Theme::socialNetworks() as $key=>$label): ?>
@@ -52,7 +51,7 @@
 					</ul>
 					<p class="site-description-footer">
 						<?php echo $site->description() ?>
-					</p>		
+					</p>
 				</div>
 				<div class="col-md">
 					<h3 class="title"><?php echo $L->get('Latest posts') ?></h3>

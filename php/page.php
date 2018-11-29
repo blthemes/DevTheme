@@ -22,7 +22,7 @@
 						<a href="<?php echo DOMAIN_CATEGORIES.$page->categoryKey() ?>" rel="tag">
 							<?php echo $page->category() ?>
 						</a>
-					</span>					
+					</span>
 					<?php endif?>
 					<span class="read-later" data-toggle="tooltip" data-placement="top" data-id="<?php echo $page->slug() ?>" data-title="<?php echo $page->title() ?>" data-original-title="Read Later">
 						<i></i>
@@ -133,23 +133,19 @@
 			<?php endif;?>
 			<?php endif;?>
 			<?php
-			$related = $helper->getRelated(2);
+			$related = $helper->getRelated();
 			if($related):?>
 			<div class="related-posts">
-				<h3 class="title">
+				<h4>
 					<?php echo $L->get('Related posts'); ?>
-				</h3>
+				</h4>
 				<div class="loop">
 					<?php foreach($related as $relpage): ?>
 					<article class="post item">
 						<div class="post-inner-content">
-							<p>
-								<a href="<?php echo $relpage->permalink() ?>" class="post-title" title="<?php echo $relpage->title() ?>">
-									<strong>
-										<?php echo $relpage->title() ?>
-									</strong>
-								</a>
-							</p>
+							<a href="<?php echo $relpage->permalink() ?>" class="post-title" title="<?php echo $relpage->title() ?>">
+								<?php echo $relpage->title() ?>
+							</a>
 						</div>
 						<div class="post-meta">
 							<time datetime="<?php echo $relpage->dateRaw('c') ?>">
