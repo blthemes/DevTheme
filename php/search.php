@@ -43,10 +43,10 @@ else{
 }
 
 
-$json = json_encode($cache, JSON_UNESCAPED_UNICODE);
+$json = json_encode($cache, JSON_UNESCAPED_UNICODE|JSON_HEX_APOS);
 //$err = json_last_error();
 
-echo '<script>var searchArr=JSON.parse(\''. $json.'\'), searchTerm="'. $searchTerm .'", domainBase="'.DOMAIN_BASE.'" ;</script>'.PHP_EOL;
+echo '<script>var searchArr='. $json.', searchTerm="'. $searchTerm .'", domainBase="'.DOMAIN_BASE.'" ;</script>'.PHP_EOL;
 //echo Theme::javascript('js/search/elasticlunr.js');
 //echo Theme::javascript('js/search/search.js');	
 echo Theme::javascript('js/search/searchbundle.min.js');
