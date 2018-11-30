@@ -15,12 +15,12 @@ class Helper
 		$image_host_path = $image_url_parts['host'] . $image_url_parts['path'];
 		$subdomain = rand( 0, 2 );
 		if($subdomain==0){
-		   $new_url  = "https://i.meln.top/";
+			$new_url  = "https://i.meln.top/";
 		}else{
-		   $new_url  = "https://i.meln.top/".$subdomain."/";
+			$new_url  = "https://i.meln.top/".$subdomain."/";
 		}
 		$new_url .= 'width/' . $width . '/n/'; //resize image, keep proportions
-		
+
 		$first_img = $new_url . $image_host_path;
 
         return $first_img;
@@ -236,12 +236,17 @@ class Helper
                     shuffle($allCatPages);
                 }
                 $related = array();
-                for ($i = 0; $i < $max; $i++) {
-                    $item = new Page($allCatPages[$i]);
-                    if ($item->published()) {
-                        $related[] = $item;
-                    }
-                }
+				try {
+					for ($i = 0; $i < $max; $i++) {
+						$item = new Page($allCatPages[$i]);
+						if ($item->published()) {
+							$related[] = $item;
+						}
+					}
+				}
+				catch(Exception $e) {
+					//exception
+				}
                 return $related;
             }
 
