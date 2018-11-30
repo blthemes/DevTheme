@@ -22,6 +22,7 @@
 							<i class='icon-bookmark'></i>.
 						</p>
 					</div>
+					<?php echo '<script>var domainPages="'.DOMAIN_PAGES.'" ;</script>'.PHP_EOL; ?>
 				</div>
 				 <?php if ($site->twitter()) : ?>
 				 <div class="widget">
