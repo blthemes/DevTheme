@@ -1,4 +1,3 @@
-
 <main id="content" class="container" role="main">
 	<div class="row">
 		<div class="col-lg-10 col-xl-8 mr-auto ml-auto">

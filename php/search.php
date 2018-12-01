@@ -47,11 +47,8 @@ $json = json_encode($cache, JSON_UNESCAPED_UNICODE|JSON_HEX_APOS);
 //$err = json_last_error();
 
 echo '<script>var searchArr='. $json.', searchTerm="'. $searchTerm .'", domainBase="'.DOMAIN_PAGES.'" ;</script>'.PHP_EOL;
-//echo Theme::javascript('js/search/elasticlunr.js');
-//echo Theme::javascript('js/search/search.js');	
 echo Theme::javascript('js/search/searchbundle.min.js');
 ?>
-
 <main id="content" class="container search" role="main">
 	<div class="row">
 		<div class="col-md-12 col-lg-10 col-xl-8 mr-auto ml-auto">
@@ -65,11 +62,12 @@ echo Theme::javascript('js/search/searchbundle.min.js');
 			<?php else: ?>
 			<h4 class="title"></h4>
 			<?php endif; ?>
-			<div class="loop">				
-			</div>			
+			<div class="loop"></div>
 		</div>
 	</div>
 	<div class="col-md-12 text-center">
-			<a href="#" id="load-posts" data-posts_per_page="6" class="btn hide"><?php echo $L->get('Load more posts')?></a>
+		<a href="#" id="load-posts" data-posts_per_page="6" class="btn hide">
+			<?php echo $L->get('Load more posts')?>
+		</a>
 	</div>
 </main>
