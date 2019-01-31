@@ -1,0 +1,25 @@
+{
+  "theme-data": {
+    "name": "DevTheme",
+    "description": "Een eenvoudig en minimalistisch thema met de nadruk op de inhoud en een opmaak voor 1 kolom."
+  },
+  "menu": "Menu",
+  "blog": "Blog",
+  "continue-reading": "Lees verder",
+  "type-to-start-searching": "Typ om te zoeken",
+  "search": "Zoeken",
+  "latest-posts": "Recent",
+  "related-posts": "Gerelateerd",
+  "you-haven't-yet-saved-any-bookmarks-to-bookmark-a-post-just-click": "Er zijn nog geen bladwijzers. Om een bladwijzer te maken, klik op",
+  "latest-tweets": "Recente tweets",
+  "newsletter": "Nieuwsbrief",
+  "subscribe-to-receive-our-latest-news": "Abonneren op ons laatste nieuws.",
+  "find-us-on": "Vind ons op",
+  "pages": "Pagina's",
+  "powered-by": "Vervaardigd met",
+  "search-page": "Zoekpagina",
+  "newer": "Nieuwer",
+  "older": "Ouder",
+  "search-results-for": "Zoekresultaten voor",
+  "load-more-posts": "Meer berichten laden"
+}
