@@ -28,7 +28,8 @@
 				 <div class="widget">
                     <h3 class="title"><?php echo $L->get('Latest Tweets') ?></h3>
                     <div class="tweets" data-twitter="<?php echo basename($site->twitter()) ?>"></div>
-                </div>				<?php endif; ?>
+                </div>
+				<?php endif; ?>
 				<?php Theme::plugins('siteSidebar'); ?>
 				<span class="modal-inner-backdrop"></span>
 			</div>
