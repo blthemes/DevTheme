@@ -22,10 +22,10 @@ if(!$searchCache){
 		// Process content
 
 		$content = str_replace('<', ' <', $page->content(false));
-		$content = html_entity_decode($content, ENT_COMPAT, UTF-8);
+		$content = html_entity_decode($content, ENT_QUOTES, "UTF-8");
 		$content = Text::removeHTMLTags($content);
-		$content = $helper->limit_text_words($content, 350, '');
-		$content = trim(preg_replace('/\s+/', ' ', $content)); //remove repeated spaces
+		$content = $helper->limit_text_words($content, 300, '');		
+		$content = trim($content);
 		$content = htmlentities($content, ENT_QUOTES | ENT_IGNORE, "UTF-8");
 
 		// Include the page to the cache
@@ -44,11 +44,12 @@ else{
 
 
 $json = json_encode($cache, JSON_UNESCAPED_UNICODE|JSON_HEX_APOS);
-//$err = json_last_error();
 
-echo '<script>var searchArr='. $json.', searchTerm="'. $searchTerm .'", domainBase="'.DOMAIN_PAGES.'" ;</script>'.PHP_EOL;
+echo '<script>var searchArr='.$json.', searchTerm="'. $searchTerm .'", domainBase="'.DOMAIN_PAGES.'" ;</script>'.PHP_EOL;
 echo Theme::javascript('js/search/searchbundle.min.js');
+
 ?>
+
 <main id="content" class="container search" role="main">
 	<div class="row">
 		<div class="col-md-12 col-lg-10 col-xl-8 mr-auto ml-auto">

@@ -69,7 +69,7 @@ class Helper
                 $content = str_replace('<', ' <', $page->content(false));
                 $content = html_entity_decode($content);
                 $description = Text::truncate(Text::removeHTMLTags($content), 250);
-                $description = trim(preg_replace('/\s+/', ' ', $description));//remove repeated spaces
+                $description = trim($description);//remove repeated spaces
             }
         } elseif ($WHERE_AM_I == 'category') {
             try {
@@ -204,9 +204,9 @@ class Helper
     public static function content2excerpt($cont,  $limit=500 , $ending='...' )
     {
         $cont = str_replace('<', ' <', $cont);
-        $cont = html_entity_decode($cont);
+        $cont = html_entity_decode($cont, ENT_QUOTES | ENT_HTML5, "UTF-8");
         $description = Text::truncate(Text::removeHTMLTags($cont), $limit);
-        $description = trim(preg_replace('/\s+/', ' ', $description));//remove repeated spaces
+        $description = trim($description);
         return $description. $ending;
     }
 

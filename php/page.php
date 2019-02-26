@@ -42,22 +42,20 @@
 				<div class="post-meta">
 					<?php if ($page->tags()):?>
 					<span class="tags">
-						<?php
-							  $tags = $page->tags(true);
-							  foreach($tags as $tagKey=>$tagName) :?>
+						<?php foreach($page->tags(true) as $tagKey=>$tagName) :?>
 						<a href="<?php echo DOMAIN_TAGS.$tagKey ?>" rel="tag">
 							<?php echo $tagName ?>
 						</a>
 
-						<?php endforeach ?>
+						<?php endforeach; ?>
 					</span>
 					<?php endif?>
 					<div class="inner">
 						<?php include(THEME_DIR_PHP.'parts/socialshare.php');  ?>
 					</div>
 				</div>
-				<?php if($page->user(firstName) && $page->user(lastName)):
-						  $fullName = $page->user(firstName) .' '.$page->user(lastName);?>
+				<?php if($page->user('firstName') && $page->user('lastName')):
+						  $fullName = $page->user('firstName') .' '.$page->user('lastName');?>
 				<div class="authors">
 					<section class="intro">
 						<div class="intro-meta">
