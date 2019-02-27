@@ -41,7 +41,13 @@
 
 		<div class="footer-content">
 			<div class="row">
-				<div class="col-md-4">					
+				<div class="col-md-4">
+					<h3 class="title"><?php echo $site->title() ?></h3>
+                    <p class="site-description-footer">
+						<?php echo $site->description() ?>
+					</p>		
+
+					<?php if(!empty(Theme::socialNetworks())):?>
 					<h3 class="title"><?php echo $L->get('Find us on') ?></h3>
 					<ul class="social">
 						<?php foreach (Theme::socialNetworks() as $key=>$label): ?>
@@ -52,15 +58,13 @@
 						</li>
 						<?php endforeach; ?>
 					</ul>
-					<p class="site-description-footer">
-						<?php echo $site->description() ?>
-					</p>
+					<?php endif; ?>
+				
 				</div>
 				<div class="col-md">
 					<h3 class="title"><?php echo $L->get('Latest posts') ?></h3>
 					<ul class="posts-list">
 						<?php
-
 						$listOfKeys = $pages->getList(1, 4);
 						if ($listOfKeys) :
 							foreach ($listOfKeys as $key) :
@@ -81,7 +85,9 @@
 						<?php echo $L->get('Pages'); ?>
 					</h3>
 					<ul class="posts-list">
-						<?php foreach ($staticContent as $staticPage) : ?>
+						<?php foreach ($staticContent as $staticPage) :
+						  if(Text::stringContains($staticPage->key(),'404')) continue;
+						?>
 						<li>
 							<a href="<?php echo $staticPage->permalink(); ?>">
 								<?php echo $staticPage->title(); ?>
@@ -114,4 +120,3 @@
 		</svg>
 	</a>
 </footer>
-

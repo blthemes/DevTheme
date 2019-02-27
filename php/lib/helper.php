@@ -9,22 +9,17 @@ class Helper
 		}
 		$image_url_parts = @parse_url( $image );
 
-		if ( ! is_array( $image_url_parts ) || empty( $image_url_parts['host'] ) || empty( $image_url_parts['path'] ) ) return $image;
+		if ( !is_array( $image_url_parts ) || empty( $image_url_parts['host'] ) || empty( $image_url_parts['path'] ) ) return $image;
 		if( strpos( $image_url_parts['host'], 'localhost') !== false || strpos( $image_url_parts['host'], '127.0.0.1') !== false) return $image;
-
-		$image_host_path = $image_url_parts['host'] . $image_url_parts['path'];
-		$subdomain = rand( 0, 2 );
-		if($subdomain==0){
-			$new_url  = "https://i.meln.top/";
-		}else{
-			$new_url  = "https://i.meln.top/".$subdomain."/";
+		
+		$image_host_path = $image_url_parts['host'] . $image_url_parts['path'];	
+		
+		$cdn_url  = "https://i.meln.top";		
+		$cdn_url .= '/width/' . $width . '/n/'. $image_host_path; //resize image, keep proportions
+		
+        return $cdn_url;
 		}
-		$new_url .= 'width/' . $width . '/n/'; //resize image, keep proportions
 
-		$first_img = $new_url . $image_host_path;
-
-        return $first_img;
-    }
 
     public function previousKey()
     {

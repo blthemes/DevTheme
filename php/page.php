@@ -33,7 +33,7 @@
 				</div>
 				<?php if ($page->coverImage()): ?>
 				<figure class="feature-image">
-					<img src="<?php echo $helper->cdn_that_image ($page->coverImage(),1000) ?>" alt="<?php echo $page->title() ?>" />
+					<img src="<?php echo $helper->cdn_that_image($page->coverImage(),1000) ?>" alt="<?php echo $page->title() ?>" />
 				</figure>
 				<?php endif ?>
 				<div class="editor-content">
@@ -131,7 +131,7 @@
 			<?php endif;?>
 			<?php endif;?>
 			<?php
-			$related = $helper->getRelated();
+			$related = $helper->getRelated(2);
 			if($related):?>
 			<div class="related-posts">
 				<h4>
@@ -141,7 +141,7 @@
 					<?php foreach($related as $relpage): ?>
 					<article class="post item">
 						<div class="post-inner-content">
-							<a href="<?php echo $relpage->permalink() ?>" class="post-title" title="<?php echo $relpage->title() ?>">
+							<a href="<?php echo $relpage->permalink() ?>" class="post-title">
 								<?php echo $relpage->title() ?>
 							</a>
 						</div>

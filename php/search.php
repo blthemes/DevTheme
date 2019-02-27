@@ -2,52 +2,11 @@
 require_once 'lib/filecache.php';
 $searchTerm = urldecode($url->parameter('search'));
 $searchTerm = Text::removeHTMLTags($searchTerm);
-$searchTerm = trim(preg_replace('/\s+/', ' ',$searchTerm)); //remove repeated spaces and trim
+$searchTerm = trim($searchTerm); 
 $searchTerm = htmlspecialchars ($searchTerm);
-/**caching pages for performance */
-$fCache = new fileCache();
-$fCache->changeConfig([
-	"cacheDirectory" => PATH_TMP."cache-storage".DS,
-	'gzipCompression'        => false
-	]);
 
-$cache = array();
-$searchCache = $fCache->get('searchCache');
-if(!$searchCache){
-	$list = $pages->getPublishedDB();
-
-	foreach ($list as $pageKey) {
-		$page = buildPage($pageKey);
-
-		// Process content
-
-		$content = str_replace('<', ' <', $page->content(false));
-		$content = html_entity_decode($content, ENT_QUOTES, "UTF-8");
-		$content = Text::removeHTMLTags($content);
-		$content = $helper->limit_text_words($content, 300, '');		
-		$content = trim($content);
-		$content = htmlentities($content, ENT_QUOTES | ENT_IGNORE, "UTF-8");
-
-		// Include the page to the cache
-		$cache[]=	array(
-						'title' =>  Sanitize::html($page->title()),
-						'content' =>  $content,
-						'key' => $pageKey,
-					);
-
-	}
-	$fCache->set('searchCache',$cache, strtotime('+1 hour')); //cache pages for one hour
-}
-else{
-	$cache = $searchCache;
-}
-
-
-$json = json_encode($cache, JSON_UNESCAPED_UNICODE|JSON_HEX_APOS);
-
-echo '<script>var searchArr='.$json.', searchTerm="'. $searchTerm .'", domainBase="'.DOMAIN_PAGES.'" ;</script>'.PHP_EOL;
+echo '<script>var uploadsFolder = "'.HTML_PATH_UPLOADS.'", searchTerm="'. $searchTerm .'", domainBase="'.DOMAIN_PAGES.'" ;</script>'.PHP_EOL;
 echo Theme::javascript('js/search/searchbundle.min.js');
-
 ?>
 
 <main id="content" class="container search" role="main">
@@ -63,12 +22,11 @@ echo Theme::javascript('js/search/searchbundle.min.js');
 			<?php else: ?>
 			<h4 class="title"></h4>
 			<?php endif; ?>
-			<div class="loop"></div>
+			<div class="loop">				
+			</div>			
 		</div>
 	</div>
 	<div class="col-md-12 text-center">
-		<a href="#" id="load-posts" data-posts_per_page="6" class="btn hide">
-			<?php echo $L->get('Load more posts')?>
-		</a>
+			<a href="#" id="load-posts" data-posts_per_page="6" class="btn hide"><?php echo $L->get('Load more posts')?></a>
 	</div>
 </main>
