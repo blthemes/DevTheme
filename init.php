@@ -1,4 +1,5 @@
 <?php
+
 $searchHook = 'dtsearch';
 if (!isset($login)) {
 	$login = new Login();

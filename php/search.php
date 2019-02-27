@@ -1,5 +1,5 @@
 <?php
-require_once 'lib/filecache.php';
+
 $searchTerm = urldecode($url->parameter('search'));
 $searchTerm = Text::removeHTMLTags($searchTerm);
 $searchTerm = trim($searchTerm); 

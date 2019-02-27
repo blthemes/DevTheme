@@ -6,7 +6,7 @@
 					<div class="blog-logo">
 						<a href="<?php echo $site->url(); ?>" rel="home">
 							<?php if( method_exists($site, 'logo') &&  $site->logo() ):?>
-							<img src="<?php echo $helper->cdn_that_image($site->logo(), 120); ?>" alt="<?php echo $site->title()?>" width="120" />
+							<img src="<?php echo $helper->cdn_that_image($site->logo(), 130); ?>" alt="<?php echo $site->title()?>"/>
 							<?php else: ?>
 							<?php echo $site->title(); ?>							
 							<span>

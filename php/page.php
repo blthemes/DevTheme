@@ -59,9 +59,9 @@
 				<div class="authors">
 					<section class="intro">
 						<div class="intro-meta">
-							<?php if($page->user(profilePicture)): ?>
+							<?php if($page->user('profilePicture')): ?>
 							<figure class="intro-image">
-								<img src="<?php echo $helper->cdn_that_image($page->user(profilePicture),100)?>" alt="<?php echo $fullName?>" />
+								<img src="<?php echo $helper->cdn_that_image($page->user('profilePicture'),100)?>" alt="<?php echo $fullName?>" />
 							</figure>
 							<?php endif;?>
 							<div class="inner">
@@ -71,30 +71,30 @@
 									</strong>
 								</h4>
 								<ul class="social">
-									<?php if ($page->user(twitter)) : ?>
+									<?php if ($page->user('twitter')) : ?>
 									<li class="nav-item">
-										<a class="twitter" href="<?php echo $page->user(twitter) ?>" target="_blank" data-toggle="tooltip" data-placement="bottom" data-original-title="Twitter" rel="nofollow noreferrer">
+										<a class="twitter" href="<?php echo $page->user('twitter') ?>" target="_blank" data-toggle="tooltip" data-placement="bottom" data-original-title="Twitter" rel="nofollow noreferrer">
 											<i class="icon-twitter" aria-hidden="true"></i>
 										</a>
 									</li>
 									<?php endif ?>
-									<?php if ($page->user(facebook)) : ?>
+									<?php if ($page->user('facebook')) : ?>
 									<li class="nav-item">
-										<a class="facebook" href="<?php echo $page->user(facebook) ?>" target="_blank" data-toggle="tooltip" data-placement="bottom" data-original-title="Facebook" rel="nofollow noreferrer">
+										<a class="facebook" href="<?php echo $page->user('facebook') ?>" target="_blank" data-toggle="tooltip" data-placement="bottom" data-original-title="Facebook" rel="nofollow noreferrer">
 											<i class="icon-facebook" aria-hidden="true"></i>
 										</a>
 									</li>
 									<?php endif ?>
-									<?php if ($page->user(github)) : ?>
+									<?php if ($page->user('github')) : ?>
 									<li class="nav-item">
-										<a class="github" href="<?php echo $page->user(github) ?>" target="_blank" data-toggle="tooltip" data-placement="bottom" data-original-title="GitHub" rel="nofollow noreferrer">
+										<a class="github" href="<?php echo $page->user('github') ?>" target="_blank" data-toggle="tooltip" data-placement="bottom" data-original-title="GitHub" rel="nofollow noreferrer">
 											<i class="icon-github" aria-hidden="true"></i>
 										</a>
 									</li>
 									<?php endif ?>
-									<?php if ($page->user(gitlab)) : ?>
+									<?php if ($page->user('gitlab')) : ?>
 									<li class="nav-item">
-										<a class="gitlab" href="<?php echo $page->user(gitlab) ?>" target="_blank" data-toggle="tooltip" data-placement="bottom" data-original-title="GitLab" rel="nofollow noreferrer">
+										<a class="gitlab" href="<?php echo $page->user('gitlab') ?>" target="_blank" data-toggle="tooltip" data-placement="bottom" data-original-title="GitLab" rel="nofollow noreferrer">
 											<i class="icon-gitlab" aria-hidden="true"></i>
 										</a>
 									</li>
