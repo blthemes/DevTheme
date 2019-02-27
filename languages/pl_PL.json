@@ -1,0 +1,25 @@
+{
+  "theme-data": {
+    "name": "DevTheme",
+    "description": "Szybki, przejrzysty, minimalistyczny szablon, z nastawieniem na prezentację treści w dwukolumnowym layoucie."
+  },
+  "menu": "Menu",
+  "blog": "Blog",
+  "continue-reading": "Czytaj dalej",
+  "type-to-start-searching": "Pisz aby rozpocząć wyszukiwanie",
+  "search": "Szukaj",
+  "latest-posts": "Najnowsze wpisy",
+  "related-posts": "Powiązane wpisy",
+  "you-haven't-yet-saved-any-bookmarks-to-bookmark-a-post-just-click": "Nie zapisałeś jeszcze żadnych bookmarków. Aby dodać wpis, po prostu kliknij.",
+  "latest-tweets": "Najnowsze tweety",
+  "newsletter": "Newsletter",
+  "subscribe-to-receive-our-latest-news": "Zapisz się aby otrzymywać powiadomienia.",
+  "find-us-on": "Znajdź nas na",
+  "pages": "Strony",
+  "powered-by": "Napędzane przez",
+  "search-page": "Strona wyszukiwania",
+  "newer": "Nowsze",
+  "older": "Starsze",
+  "search-results-for": "Wyniki wyszukiwania dla",
+  "load-more-posts": "Wczytaj więcej wpisów"
+}

@@ -2,7 +2,10 @@
 
 A simple, clean, minimalist theme, featuring content-focused design and single-column layout.
 
-Translators version.
+![screenshot](https://blthemes.pp.ua/devtheme/bl-content/uploads/pages/e7d20df23f4689c9fa7f7c017c562d8b/devtheme38.png
+ "DevTheme")
+
+[Live Demo](https://blthemes.pp.ua/devtheme/)
 
 ## Changelog
 
