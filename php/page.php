@@ -27,9 +27,6 @@
 					<span class="read-later" data-toggle="tooltip" data-placement="top" data-id="<?php echo $page->slug() ?>" data-title="<?php echo $page->title() ?>" data-original-title="Read Later">
 						<i></i>
 					</span>
-					<div class="inner">
-						<?php include(THEME_DIR_PHP.'parts/socialshare.php');  ?>
-					</div>
 				</div>
 				<?php if ($page->coverImage()): ?>
 				<figure class="feature-image">
@@ -131,8 +128,8 @@
 			<?php endif;?>
 			<?php endif;?>
 			<?php
-			$related = $helper->getRelated(2);
-			if($related):?>
+
+			if($related = $helper->getRelated(2)):?>
 			<div class="related-posts">
 				<h4>
 					<?php echo $L->get('Related posts'); ?>

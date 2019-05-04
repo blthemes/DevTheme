@@ -28,8 +28,7 @@
 				 <div class="widget">
                     <h3 class="title"><?php echo $L->get('Latest Tweets') ?></h3>
                     <div class="tweets" data-twitter="<?php echo basename($site->twitter()) ?>"></div>
-                </div>
-				<?php endif; ?>
+                </div>				<?php endif; ?>
 				<?php Theme::plugins('siteSidebar'); ?>
 				<span class="modal-inner-backdrop"></span>
 			</div>
@@ -41,12 +40,7 @@
 
 		<div class="footer-content">
 			<div class="row">
-				<div class="col-md-4">
-					<h3 class="title"><?php echo $site->title() ?></h3>
-                    <p class="site-description-footer">
-						<?php echo $site->description() ?>
-					</p>		
-
+				<div class="col-md-4">					
 					<?php if(!empty(Theme::socialNetworks())):?>
 					<h3 class="title"><?php echo $L->get('Find us on') ?></h3>
 					<ul class="social">
@@ -59,12 +53,15 @@
 						<?php endforeach; ?>
 					</ul>
 					<?php endif; ?>
-				
+					<p class="site-description-footer">
+						<?php echo $site->description() ?>
+					</p>
 				</div>
 				<div class="col-md">
 					<h3 class="title"><?php echo $L->get('Latest posts') ?></h3>
 					<ul class="posts-list">
 						<?php
+
 						$listOfKeys = $pages->getList(1, 4);
 						if ($listOfKeys) :
 							foreach ($listOfKeys as $key) :
@@ -120,3 +117,4 @@
 		</svg>
 	</a>
 </footer>
+

@@ -21,5 +21,7 @@
   "newer": "Newer",
   "older": "Older",
   "search-results-for": "Search results for",
-  "load-more-posts": "Load more posts"
+  "load-more-posts": "Load more posts",
+  "nothing-found-for": "Nothing found for",
+  "search-term-too-short": "Search term too short"
 }

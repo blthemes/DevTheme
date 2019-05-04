@@ -33,7 +33,7 @@
 									  echo  $page->description();
 								  }
 								  else{
-									  echo  $helper->content2excerpt($page->content(false),250);
+									  echo  $helper->content2excerpt($page->content(false), 250);
 								  }
                             ?>
 						</p>

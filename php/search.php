@@ -6,6 +6,7 @@ $searchTerm = trim($searchTerm);
 $searchTerm = htmlspecialchars ($searchTerm);
 
 echo '<script>var uploadsFolder = "'.HTML_PATH_UPLOADS.'", searchTerm="'. $searchTerm .'", domainBase="'.DOMAIN_PAGES.'" ;</script>'.PHP_EOL;
+
 echo Theme::javascript('js/search/searchbundle.min.js');
 ?>
 
@@ -30,3 +31,10 @@ echo Theme::javascript('js/search/searchbundle.min.js');
 			<a href="#" id="load-posts" data-posts_per_page="6" class="btn hide"><?php echo $L->get('Load more posts')?></a>
 	</div>
 </main>
+<script>
+	var translations ={
+	  "search-results-for"    : "<?php echo $L->get('Search results for')?>",
+	  "nothing-found-for"     : "<?php echo $L->get('Nothing found for')?>",
+	  "search-term-too-short" : "<?php echo $L->get('Search term too short')?>",
+	};
+</script>
