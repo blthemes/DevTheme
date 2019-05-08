@@ -21,5 +21,7 @@
   "newer": "Nieuwer",
   "older": "Ouder",
   "search-results-for": "Zoekresultaten voor",
-  "load-more-posts": "Meer berichten laden"
+  "load-more-posts": "Meer berichten laden",
+  "nothing-found-for": "Niets gevonden voor",
+  "search-term-too-short": "Zoekterm is te kort"
 }
