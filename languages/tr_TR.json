@@ -1,0 +1,27 @@
+{
+  "theme-data": {
+    "name": "DevTheme",
+    "description": "İçerik odaklı tasarım ve tek sütun düzenine sahip basit, temiz, minimalist bir tema."
+  },
+  "menu": "Menü",
+  "blog": "Blog",
+  "continue-reading": "okumaya devam et",
+  "type-to-start-searching": "Aramaya başlamak için yazın",
+  "search": "Arama",
+  "latest-posts": "Son Gönderiler",
+  "related-posts": "İlgili Gönderiler",
+  "you-haven't-yet-saved-any-bookmarks-to-bookmark-a-post-just-click": "Henüz herhangi bir yer imini kaydetmediniz. Bir gönderiyi yer imlerine eklemek için tıklamanız yeterlidir.",
+  "latest-tweets": "Son Tweetler",
+  "newsletter": "Bülten",
+  "subscribe-to-receive-our-latest-news": "En son haberlerimizi almak için abone olun.",
+  "find-us-on": "Bize ulaşın",
+  "pages": "Sayfalar",
+  "powered-by": "Powerd by",
+  "search-page": "Arama sayfası",
+  "newer": "Daha yeni",
+  "older": "Daha eski",
+  "search-results-for": "için arama sonuçları",
+  "load-more-posts": "Daha fazla gönderi yükle",
+  "nothing-found-for": "için hiçbir şey bulunamadı",
+  "search-term-too-short": "Arama terimi çok kısa"
+}
