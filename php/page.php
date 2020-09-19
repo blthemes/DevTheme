@@ -5,7 +5,7 @@
 			<?php Theme::plugins('pageBegin'); ?>
 			<article class="post-wrap <?php echo $page->sticky() ? 'featured':''; ?>">
 				<?php if($login->isLogged()) if($canEdit = checkRole(array('admin', 'editor', 'author'))):?>
-				<a href="<?php echo HTML_PATH_ADMIN_ROOT.'edit-content/'.$page->slug() ?>" class="article-edit" target="_blank">
+				<a href="<?php echo HTML_PATH_ADMIN_ROOT.'edit-content/'.$page->key() ?>" class="article-edit" target="_blank">
 					<span>Edit</span>
 					<i class="icon-arrow-right"></i>
 				</a>
