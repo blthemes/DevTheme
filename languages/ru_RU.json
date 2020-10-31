@@ -1,0 +1,28 @@
+{
+  "theme-data": {
+    "name": "DevTheme",
+    "description": "Простая, чистая, минималистичная тема с ориентированным на контент дизайном и расположением в одну колонку."
+  },
+  "menu": "Меню",
+  "blog": "Блог",
+  "continue-reading": "Продолжить чтение",
+  "type-to-start-searching": "Введите поисковый запрос",
+  "search": "Поиск",
+  "latest-posts": "Последние записи",
+  "related-posts": "Похожие записи",
+  "bookmarks": "Закладки",
+  "you-haven't-yet-saved-any-bookmarks-to-bookmark-a-post-just-click": "Вы еще не сохранили ни одной закладки. Чтобы добавить запись в закладки, просто нажмите",
+  "latest-tweets": "Последние Твиты",
+  "newsletter": "Рассылка",
+  "subscribe-to-receive-our-latest-news": "Подпишись, чтобы получать свежие записи.",
+  "find-us-on": "Соц. сети",
+  "pages": "Страницы",
+  "powered-by": "Работает на",
+  "search-page": "Страница поиска",
+  "newer": "След.",
+  "older": "Пред.",
+  "search-results-for": "Вот что удалось найти по запросу",
+  "load-more-posts": "Загрузить еще...",
+  "nothing-found-for": "Ничего не найдено по запросу",
+  "search-term-too-short": "Поисковый запрос слишком короткий"
+}
